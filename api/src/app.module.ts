@@ -1,10 +1,9 @@
 import { Module } from '@nestjs/common';
 import { AppController } from './controllers/app.controller';
-import { AppService } from './services/app.service';
+import { PROVIDERS } from './providers';
 
 @Module({
-  imports: [],
   controllers: [AppController],
-  providers: [AppService],
+  providers: [PROVIDERS.MONGO_SERVICE],
 })
 export class AppModule {}

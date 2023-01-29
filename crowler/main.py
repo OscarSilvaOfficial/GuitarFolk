@@ -13,10 +13,9 @@ ml_urls_finded = get_ml_urls_pattern(ml_site_text, 'produto.mercadolivre.com.br'
 olx_urls_finded = get_olx_urls_pattern(olx_site_text, '.olx.com.br')
 
 document = { 
-  str(now.timestamp()): { 
-    'mercado_livre': ml_urls_finded,
-    'olx': olx_urls_finded
-  } 
+  'mercado_livre': ml_urls_finded,
+  'olx': olx_urls_finded,
+  'created_at': now.timestamp()
 }
 
 add_product_urls(document)
